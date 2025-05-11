@@ -1,6 +1,8 @@
 package it.uniroma3.diadia.ambienti;
 
 import it.uniroma3.diadia.attrezzi.Attrezzo;
+import it.uniroma3.diadia.ambienti.StanzaMagica;
+
 
 public class Labirinto {
 
@@ -33,7 +35,9 @@ public class Labirinto {
 		Stanza aulaN11 = new Stanza("Aula N11");
 		Stanza aulaN10 = new Stanza("Aula N10");
 		Stanza laboratorio = new Stanza("Laboratorio Campus");
-		Stanza biblioteca = new Stanza("Biblioteca");
+
+		// Sostituisci la stanza vincente con una StanzaMagica
+		StanzaMagica biblioteca = new StanzaMagica("Biblioteca", 1); // trasforma già dal 2° attrezzo
 
 		/* collega le stanze */
 		atrio.impostaStanzaAdiacente("nord", biblioteca);
@@ -57,4 +61,5 @@ public class Labirinto {
 		stanzaCorrente = atrio;
 		stanzaVincente = biblioteca;
 	}
+
 }
